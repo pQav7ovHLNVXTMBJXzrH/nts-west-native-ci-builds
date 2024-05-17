@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: 'TranQuangTienSA/nts-west-native-ios.git'
+          repository: 'TranQuangTienSA/nts-west-native-ios'
           ref: ${{ github.head_ref }}
           token: ${{ secrets.WEST_CHECKOUT_TOKEN }}
       - name: Hello world
