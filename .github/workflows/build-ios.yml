@@ -13,7 +13,12 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.WEST_IOS_REPOSITORY }}
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.WEST_CHECKOUT_TOKEN }}
       - name: Hello world
         run: |
           echo "Hello world"
