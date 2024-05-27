@@ -24,3 +24,4 @@ jobs:
       - name: Hello world
         run: |
           echo "Hello world"
+          ls -lia
