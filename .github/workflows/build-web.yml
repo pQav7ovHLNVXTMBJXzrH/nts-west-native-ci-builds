@@ -29,10 +29,10 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.WEST_CHECKOUT_TOKEN }}
 
-      - name: Use Node.js 20.x
+      - name: Setup Node.js ${{ vars.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: ${{ vars.NODE_VERSION }}
 
       - name: Cache node modules
         id: npm-cache
