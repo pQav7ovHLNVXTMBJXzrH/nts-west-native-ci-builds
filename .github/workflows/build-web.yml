@@ -77,7 +77,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           PUBLISH_REPO: ${{ vars.PUBLISH_REPO }}
           BASE_URL: ${{ vars.BASE_URL }}
-          IS_PREVIEW: ${{ steps.branch-name.outputs.current_branch != 'master' }}
+          IS_PREVIEW: ${{ steps.branch-name.outputs.current_branch != 'main' }}
         run: |
           if [ -z "$PUBLISH_REPO" ]; then
             npm run electron:package:staging
